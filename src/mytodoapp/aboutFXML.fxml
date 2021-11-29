@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mytodoapp.aboutFXMLController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="39.0" prefHeight="561.0" prefWidth="180.0" style="-fx-background-color: #001A3C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="39.0">
+         <children>
+            <VBox layoutX="26.0" layoutY="160.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#dashboardMouseClicked" prefHeight="63.0" prefWidth="180.0" style="-fx-background-radius: 20 0 0 20;" styleClass="menu_button" text=" Dashboard" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Times New Roman Bold" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" fontSmoothingType="LCD" glyphName="DASHBOARD" size="38" wrappingWidth="39.33333206176758" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="email_button" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#emailMouseClicked" prefHeight="63.0" prefWidth="178.0" style="-fx-background-radius: 20 0 0 20;" styleClass="menu_button" text="  Email" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="GMAIL" size="40" />
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#taskMouseClicked" prefHeight="63.0" prefWidth="178.0" style="-fx-background-radius: 20 0 0 20;" styleClass="menu_button" text="Tasks" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" fontSmoothingType="LCD" glyphName="TASKS" size="35" wrappingWidth="50.0" />
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#routineMouseClicked" prefHeight="63.0" prefWidth="178.0" style="-fx-background-radius: 20 0 0 20;" styleClass="menu_button" text="Routine" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" fontSmoothingType="LCD" glyphName="CALENDAR" size="35" wrappingWidth="50.0" />
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#settingsMouseClicked" prefHeight="63.0" prefWidth="178.0" style="-fx-background-radius: 20 0 0 20;" styleClass="menu_button" text=" Settings" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" fontSmoothingType="LCD" glyphName="COG" size="40" wrappingWidth="43.0" />
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="63.0" prefWidth="180.0" style="-fx-background-radius: 20 0 0 20; -fx-background-color: white; -fx-border-color: white;" styleClass="menu_button" text=" About" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fontSmoothingType="LCD" glyphName="INFO_CIRCLE" size="40" wrappingWidth="43.0" />
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" layoutX="73.0" layoutY="93.0" size="80" wrappingWidth="12.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0" />
+            <Text fill="WHITE" layoutX="30.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arafat Hossain Ar">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Pane onMouseDragged="#moveMouseDragged" onMousePressed="#moveMousePressed" prefHeight="40.0" prefWidth="1000.0" styleClass="top_win" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="close_win_button" layoutX="950.0" mnemonicParsing="false" onMouseClicked="#close_Window" prefHeight="35.0" prefWidth="50.0" styleClass="top_win_button">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="WINDOW_CLOSE" size="30" />
+               </graphic>
+            </Button>
+            <Button layoutX="900.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="top_win_button">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="WINDOW_MAXIMIZE" size="30" />
+               </graphic>
+            </Button>
+            <Button layoutX="850.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="top_win_button">
+               <graphic>
+                  <MaterialDesignIconView fx:id="hide_win_button" fill="WHITE" glyphName="WINDOW_MINIMIZE" onMouseClicked="#hide_Window" size="30" />
+               </graphic>
+            </Button>
+            <Pane prefHeight="40.0" prefWidth="229.0">
+               <children>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CALENDAR_TEXT" layoutX="10.0" layoutY="35.0" size="35" wrappingWidth="24.0" />
+                  <Text fill="WHITE" layoutX="50.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Work Manager" wrappingWidth="185.03515625">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="178.0" layoutY="40.0" prefHeight="60.0" prefWidth="820.0" styleClass="top_bar" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <Button layoutX="743.0" layoutY="13.0" mnemonicParsing="false" styleClass="top_bar_button">
+               <graphic>
+                  <MaterialDesignIconView fill="RED" glyphName="REFRESH" size="30" />
+               </graphic>
+            </Button>
+            <Button layoutX="697.0" layoutY="13.0" mnemonicParsing="false" styleClass="top_bar_button">
+               <graphic>
+                  <MaterialDesignIconView fill="RED" glyphName="NOTIFICATION_CLEAR_ALL" size="30" />
+               </graphic>
+            </Button>
+            <Text layoutX="350.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="contentFrame" layoutX="213.0" layoutY="133.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <TitledPane animated="false" layoutX="79.0" layoutY="34.0" text="About App" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="410.0" />
+              </content>
+               <font>
+                  <Font name="Times New Roman" size="17.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="378.0" layoutY="140.0" text="About Author" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="410.0" />
+               </content>
+               <font>
+                  <Font name="Times New Roman" size="17.0" />
+               </font>
+            </TitledPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

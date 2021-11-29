@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="newdata.NewNoteFXMLController">
+   <children>
+      <Pane onMouseDragged="#moveMouseDragged" onMousePressed="#moveMousePressed" prefHeight="40.0" prefWidth="500.0" styleClass="top_win" stylesheets="@../mytodoapp/style.css">
+         <children>
+            <Button fx:id="close_win_button" layoutX="450.0" mnemonicParsing="false" onMouseClicked="#close_Window" prefHeight="35.0" prefWidth="50.0" styleClass="top_win_button">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="WINDOW_CLOSE" size="30" />
+               </graphic>
+            </Button>
+            <Button layoutX="400.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="top_win_button">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="WINDOW_MAXIMIZE" size="30" />
+               </graphic>
+            </Button>
+            <Button layoutX="350.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="top_win_button">
+               <graphic>
+                  <MaterialDesignIconView fx:id="hide_win_button" fill="WHITE" glyphName="WINDOW_MINIMIZE" onMouseClicked="#hide_Window" size="30" />
+               </graphic>
+            </Button>
+            <Pane prefHeight="40.0" prefWidth="229.0">
+               <children>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CALENDAR_TEXT" layoutX="10.0" layoutY="35.0" size="35" wrappingWidth="24.0" />
+                  <Text fill="WHITE" layoutX="50.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Note" wrappingWidth="185.03515625">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <AnchorPane layoutY="40.0" prefHeight="460.0" prefWidth="500.0">
+         <children>
+            <Text layoutX="210.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Note">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <Label layoutX="100.0" layoutY="81.0" text="Note:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="getNote" layoutX="100.0" layoutY="111.0" prefHeight="202.0" prefWidth="314.0" promptText="Your Note" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="301.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#saveNote" prefHeight="40.0" prefWidth="113.0" text="Save">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="174.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#resetNote" prefHeight="40.0" prefWidth="113.0" text="Reset">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
